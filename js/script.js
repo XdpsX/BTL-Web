@@ -82,12 +82,12 @@ platformList.addEventListener("click", function (e) {
   setTimeout(() => displayCard(1), 600);
 });
 
-// Year in copyright
+// Set year in copyright
 const now = new Date();
 yearLabel.innerHTML = now.getFullYear();
 
-//
-window.addEventListener("scroll", function () {
+// Set line in nav-link when scroll
+const lineNavlink = function () {
   let current;
   allSections.forEach((section) => {
     const sectionTop = section.offsetTop;
@@ -102,8 +102,11 @@ window.addEventListener("scroll", function () {
       link.classList.add("nav-secondary__link--active");
     }
   });
+};
+window.addEventListener("scroll", function () {
+  lineNavlink();
 
-  // btn
+  // Reveal external buttons
   btnsExternal.classList.remove("section--hidden");
 });
 
@@ -124,4 +127,27 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 allSections.forEach((section) => {
   sectionObserver.observe(section);
   section.classList.add("section--hidden");
+});
+
+// Lazy image
+const lazyImgs = document.querySelectorAll("img[data-src]");
+const lazyLoading = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  const img = entry.target;
+  img.src = img.dataset.src;
+  img.addEventListener("load", function () {
+    img.classList.remove("lazy-img");
+  });
+  observer.unobserve(img);
+};
+const lazyObserver = new IntersectionObserver(lazyLoading, {
+  root: null,
+  threshold: 0,
+  rootMargin: "-200px",
+});
+lazyImgs.forEach((img) => {
+  lazyObserver.observe(img);
 });

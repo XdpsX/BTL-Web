@@ -150,3 +150,7 @@ button {
 .section {
   transition: all 1s;
 }
+
+.lazy-img {
+  filter: blur(20px);
+}
