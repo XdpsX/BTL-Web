@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #333;
+}
+li {
+  list-style: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.main-header {
+  padding: 1.2rem 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.main-header::after {
+  content: "";
+  width: 75%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 4%,
+    #0069b1 4%,
+    #0069b1 28%,
+    #00b0b9 28%,
+    #00b0b9 52%,
+    #f6b700 52%,
+    #f6b700 76%,
+    #df4661 76%,
+    #df4661 100%
+  );
+}
+.header_logo-box {
+  height: 100%;
+}
+.logo {
+  height: 4rem;
+}
+.header_list-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+}
+.header_links:link,
+.header_links:visited {
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.header_links:hover,
+.header_links:active {
+  color: #e20613;
+}
+.header_list-btn {
+  display: flex;
+  gap: 1.8rem;
+}
+.header_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+.header_btn:hover {
+  color: #e20613;
+}
+.header_icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.secondary-nav {
+  background-color: #000;
+  padding: 1.2rem 2.4rem;
+}
+
+.secondary-nav_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.secondary-logo {
+  height: 6rem;
+}
+.secondary-list-item:link,
+.secondary-list-item:visited {
+  color: #fff;
+  font-size: 2rem;
+  position: relative;
+  transition: all 0.3s;
+}
+.secondary-list-item:hover,
+.secondary-list-item:active {
+  color: #c19d50;
+}
+.secondary-list-item::after {
+  content: "";
+  background: no-repeat 50% / cover;
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+}
+.list-item--active::after {
+  background-image: url("https://static.bandainamcoent.eu/high/elden-ring/elden-ring/00-page-setup/elden-ring-border-leaf.png");
+}
+
+.video_loop {
+  width: 100%;
+}

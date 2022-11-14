@@ -1,0 +1,593 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --grey-color: #333;
+  --primary-color: #c19d50;
+  --red-color: #e20613;
+}
+
+/******************************/
+/* HEADER */
+/******************************/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.2rem;
+  position: relative;
+  background-color: var(--white-color);
+}
+.header__logo {
+  height: 5rem;
+  vertical-align: 0;
+}
+.header::after {
+  content: "";
+  width: 75%;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 4%,
+    #0069b1 4%,
+    #0069b1 28%,
+    #00b0b9 28%,
+    #00b0b9 52%,
+    #f6b700 52%,
+    #f6b700 76%,
+    #df4661 76%,
+    #df4661 100%
+  );
+}
+.header a {
+  margin-top: 1.3rem;
+}
+.header__nav-list {
+  display: flex;
+  gap: 4rem;
+  font-weight: 500;
+  margin-right: 12rem;
+}
+.header__button-list {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 1rem;
+}
+.header__link:link,
+.header__link:visited {
+  color: var(--grey-color);
+}
+.header__link:link,
+.header__link:visited,
+.header__btn {
+  transition: all 0.4s;
+}
+.header__link:hover,
+.header__link:active,
+.header__btn:hover {
+  color: var(--red-color);
+}
+.header__icon {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+/******************************/
+/* NAV SECONDARY */
+/******************************/
+.nav-secondary {
+  background-color: #000;
+}
+.nav-secondary__logo {
+  height: 7rem;
+  transition: all 0.3s;
+}
+.nav-secondary__logo:hover {
+  transform: scale(105%);
+}
+.nav-secondary__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav-secondary__link:link,
+.nav-secondary__link:visited {
+  font-size: 2rem;
+  color: var(--white-color);
+  font-weight: 500;
+  transition: all 0.4s;
+  position: relative;
+}
+.nav-secondary__list li:not(:nth-child(2)) a:hover {
+  color: var(--primary-color);
+}
+
+.nav-secondary__link::after {
+  content: "";
+  background: no-repeat 50% / cover;
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+}
+.nav-secondary__link--active::after {
+  background-image: url("https://static.bandainamcoent.eu/high/elden-ring/elden-ring/00-page-setup/elden-ring-border-leaf.png");
+}
+
+/******************************/
+/* Video */
+/******************************/
+.video-section {
+  position: relative;
+}
+.video_loop {
+  width: 100%;
+}
+.logo-box {
+  position: absolute;
+  bottom: -15rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/******************************/
+/* INTRO SECTION */
+/******************************/
+.intro-section {
+  padding: 4.8rem 9.6rem 0 9.6rem;
+}
+.intro-section__header {
+  padding: 8rem 0;
+}
+.heading-primary {
+  font-size: 5rem;
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+
+.intro-section__description {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 2rem;
+}
+.intro-section__description span {
+  color: var(--primary-color);
+}
+
+.intro-section__link:link,
+.intro-section__link:visited {
+  font-size: 1.2rem;
+  box-shadow: inset 0 -1px 0 0 #fff;
+  transition: all 0.2s;
+  /* border-bottom: 2px solid #fff; */
+}
+
+.intro-section__link:hover,
+.intro-section__link:active {
+  box-shadow: none;
+}
+.intro-section__content {
+  grid-template-columns: 1.5fr 2.5fr;
+  margin-bottom: 6rem;
+}
+.intro-section__text-box p:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+.intro-section__text-box p:nth-child(6) {
+  font-weight: 600;
+  margin: 3.2rem 0;
+}
+
+/******************************/
+/* FEATURE SECTION */
+/******************************/
+.feature-section {
+  width: 120rem;
+  margin: 0 auto;
+  padding: 4.8rem 9.6rem;
+
+  scroll-margin: 8rem;
+}
+
+/* .feature-section__video-box {
+  width: 75%;
+  justify-self: end;
+} */
+.feature-section__img-box img {
+  width: 100%;
+}
+.feature-section__heading {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+  background-color: var(--primary-color);
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+}
+.feature-section__heading--right {
+  padding: 1rem 1rem 1rem 8rem;
+  margin-left: -80px;
+}
+
+.feature-section__heading--left {
+  padding: 1rem 8rem 1rem 1rem;
+  margin-right: -80px;
+  text-align: end;
+}
+.feature-section__text-box p:not(:last-child) {
+  margin-bottom: 4rem;
+  line-height: 1.4;
+}
+/******************************/
+/* CHARACTER SECTION */
+/******************************/
+.character-section {
+  padding: 4.8rem 9.6rem;
+
+  scroll-margin: 8rem;
+}
+.slide-arrow {
+  /* border: 1px solid #333;
+  background-color: #fff; */
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.slide-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.prev-arrow {
+  top: 50%;
+  left: 0;
+}
+
+.next-arrow {
+  top: 50%;
+  right: 0;
+}
+
+.img {
+  width: 28rem;
+}
+.slides-div {
+  /* margin: 0 8rem; */
+  /* width: 70%; */
+  /* width: 100%; */
+  /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  opacity: 0.5; */
+
+  /* TEMP */
+  position: relative;
+  padding-top: 8rem;
+}
+
+.slider-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-text-box {
+  height: 8rem;
+}
+.slider-text-box-content {
+  display: none;
+
+  width: 48rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.character-role {
+  font-size: 4.8rem;
+  font-weight: bold;
+}
+
+.slick-current .slider-text-box-content {
+  display: block;
+}
+.slick-slide {
+  transition: all 0.5s;
+}
+.slick-slide:not(.slick-current) {
+  transform: scale(0.4);
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+  opacity: 0.5;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.8);
+}
+
+/******************************/
+/* SHOP SECTION */
+/******************************/
+.shop-section {
+  padding: 4.8rem 9.6rem;
+  scroll-margin: 8rem;
+}
+.card {
+  background-image: url(https://static.bandainamcoent.eu/high/elden-ring/elden-ring/00-page-setup/elden-ring-retailers-background.jpg);
+}
+.cards-box {
+  width: 100rem;
+  margin: 5rem auto 0;
+  display: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+
+  /* animation: displayCard 2s; */
+}
+.cards-box--active {
+  display: grid;
+  column-gap: 3.2rem;
+  row-gap: 6.4rem;
+}
+.card-image img {
+  width: 100%;
+}
+.card-content {
+  padding: 3.2rem;
+}
+.card-cta-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10.5rem;
+  gap: 1.6rem;
+}
+/* @keyframes displayCard {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+/******************************/
+/* SYSTEM */
+/******************************/
+.system-section {
+  padding: 4.8rem 9.6rem;
+  padding-bottom: 12rem;
+  scroll-margin: 8rem;
+}
+.system-section__content {
+  border: 2px solid var(--white-color);
+  padding: 0.8rem 1.6rem;
+}
+.system-section__list {
+  list-style: inside;
+  margin-bottom: 2rem;
+}
+.system-section__item {
+  font-size: 1.4rem;
+}
+.system-section__text {
+  font-style: italic;
+  font-size: 1.6rem;
+}
+/******************************/
+/* FOOTER */
+/******************************/
+.footer__part {
+  padding: 3.2rem 4.8rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 9999;
+}
+.footer__part--top {
+  background-color: var(--black-color);
+}
+.footer__logo {
+  fill: var(--white-color);
+}
+.logo-border {
+  fill: var(--red-color);
+}
+.footer__nav {
+  margin-right: 4rem;
+  font-size: 1.8rem;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer__item {
+  transition: all 0.3s;
+}
+.footer__item:hover {
+  opacity: 0.7;
+}
+.footer__navs-external {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 4rem;
+}
+.footer__list--action {
+  display: flex;
+  gap: 3rem;
+  text-transform: uppercase;
+}
+.footer__action-item a {
+  transition: all 0.4s;
+}
+.footer__action-item:hover a {
+  color: var(--red-color);
+}
+
+.footer__action-item {
+  position: relative;
+}
+.footer__action-item::after {
+  content: "";
+  display: block;
+  /* border-bottom: 1px solid var(--white-color); */
+  width: 100%;
+  height: 1px;
+  background-color: var(--white-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s;
+}
+.footer__action-item:hover::after {
+  width: 40%;
+}
+.footer__btn {
+  font-size: 1.6rem;
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+.footer__btn span {
+  font-size: 1.4rem;
+  margin-left: 0.8rem;
+  color: var(--red-color);
+  transition: all 0.3s;
+}
+
+.footer__btn:hover span {
+  color: var(--white-color);
+}
+.footer__nav--socials {
+  display: block;
+  align-self: flex-end;
+}
+.footer__list--socials {
+  display: flex;
+  gap: 4.4rem;
+}
+.footer__icon {
+  width: 3rem;
+  height: 3rem;
+  transition: all 0.2s;
+}
+
+.footer__socials-item:hover .footer__icon {
+  color: var(--red-color);
+}
+.footer__part--bottom {
+  background-color: var(--red-color);
+}
+.footer__copyright {
+  font-size: 1.2rem;
+}
+.footer__legals-list {
+  display: flex;
+  font-size: 1.2rem;
+  gap: 1.4rem;
+}
+.footer__legals-link {
+  transition: all 0.3s;
+}
+.footer__legals-item:hover .footer__legals-link {
+  opacity: 0.7;
+}
+
+.external-btns {
+  position: fixed;
+  right: 2rem;
+  bottom: 4rem;
+  z-index: 999;
+  transition: all 0.4s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.external-btns__btn {
+  width: 5.8rem;
+  height: 5.8rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.external-btns--selectable,
+.external-btns--selectable:link,
+.external-btns--selectable:visited {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+.external-btns--selectable:hover,
+.external-btns--selectable:active {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.external-btns--shop {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.external-btns--shop:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
+.external-btns__icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+/* TEMP */
+.thumb {
+  /* content: ""; */
+  /* display: block; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* position: absolute; */
+  /* position: relative; */
+  /* top: 0;
+  left: 0; */
+  /* z-index: -10; */
+  /* width: 100%; */
+  /* height: auto; */
+  /* height: 300vh; */
+
+  background-attachment: fixed;
+}
+.thumb--body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/thumbnail/Elden-Ring_-31-1024x576.jpg");
+}
+.thumb--feature {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/thumbnail/elden-ring-launch-trailer-thumbnail.jpg");
+}
+.thumb--character {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../img/thumbnail/character-thumb.jpg");
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  height: 8rem;
+}
