@@ -173,25 +173,30 @@
 .intro-section__link:active {
   box-shadow: none;
 }
-.intro-section__content {
+.intro-section__body {
   grid-template-columns: 1.5fr 2.5fr;
   margin-bottom: 6rem;
 }
-.intro-section__text-box p:not(:last-child) {
+.intro-section__paragraph {
   margin-bottom: 1.6rem;
+  letter-spacing: 0.8px;
 }
-.intro-section__text-box p:nth-child(6) {
-  font-weight: 600;
-  margin: 3.2rem 0;
+.intro-section__text-box > :last-child {
+  margin: 5.2rem 0;
 }
-
+.game-awards {
+  width: 100%;
+}
+.intro-section__video {
+  width: 100%;
+}
 /******************************/
 /* FEATURE SECTION */
 /******************************/
 .feature-section {
   width: 120rem;
   margin: 0 auto;
-  padding: 4.8rem 9.6rem;
+  padding: 6.4rem 9.6rem;
 
   scroll-margin: 8rem;
 }
@@ -232,7 +237,7 @@
 /* CHARACTER SECTION */
 /******************************/
 .character-section {
-  padding: 4.8rem 9.6rem;
+  padding: 6.4rem 9.6rem;
 
   scroll-margin: 8rem;
 }
@@ -318,7 +323,7 @@
 /* SHOP SECTION */
 /******************************/
 .shop-section {
-  padding: 4.8rem 9.6rem;
+  padding: 6.4rem 9.6rem;
   scroll-margin: 8rem;
 }
 .card {
@@ -363,7 +368,7 @@
 /* SYSTEM */
 /******************************/
 .system-section {
-  padding: 4.8rem 9.6rem;
+  padding: 6.4rem 9.6rem;
   padding-bottom: 12rem;
   scroll-margin: 8rem;
 }
@@ -495,6 +500,9 @@
   display: flex;
   font-size: 1.2rem;
   gap: 1.4rem;
+}
+.footer__legals-item {
+  text-align: center;
 }
 .footer__legals-link {
   transition: all 0.3s;

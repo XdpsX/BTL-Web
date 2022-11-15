@@ -1,0 +1,25 @@
+/* 1168 */
+@media (max-width: 73em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .intro-section__body {
+    grid-template-columns: 1fr;
+  }
+  .game-awards {
+    width: 50%;
+  }
+  .slides-div {
+    padding-top: 5rem;
+  }
+  .slider-text-box {
+    height: 4rem;
+  }
+  .character-role {
+    font-size: 4rem;
+  }
+  .slider-text-box-content {
+    bottom: -6px;
+  }
+}
