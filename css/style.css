@@ -44,7 +44,11 @@
 .header a {
   margin-top: 1.3rem;
 }
-.header__nav-list {
+.header__nav {
+  opacity: 1;
+  height: auto;
+}
+.header__list {
   display: flex;
   gap: 4rem;
   font-weight: 500;
@@ -72,6 +76,7 @@
 .header__icon {
   height: 3.2rem;
   width: 3.2rem;
+  color: var(--black-color);
 }
 
 /******************************/
@@ -128,11 +133,14 @@
 .video_loop {
   width: 100%;
 }
-.logo-box {
+.video-section__logo-box {
   position: absolute;
   bottom: -15rem;
   left: 50%;
   transform: translateX(-50%);
+}
+.video-section__logo {
+  width: 100%;
 }
 /******************************/
 /* INTRO SECTION */
@@ -189,6 +197,11 @@
 }
 .intro-section__video {
   width: 100%;
+}
+.game-scores {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
 }
 /******************************/
 /* FEATURE SECTION */
@@ -564,6 +577,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  /* position: relative; */
+  width: 100vw;
   /* position: absolute; */
   /* position: relative; */
   /* top: 0;
@@ -598,4 +613,12 @@
   z-index: 1000;
 
   height: 8rem;
+}
+
+.label__checkbox {
+  display: none;
+}
+
+.header__form {
+  display: none;
 }

@@ -11,7 +11,7 @@ $(document).ready(function () {
     focusOnSelect: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 900,
         settings: {
           arrows: false,
           centerMode: true,
@@ -20,7 +20,7 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
           arrows: false,
           centerMode: true,
@@ -150,4 +150,24 @@ const lazyObserver = new IntersectionObserver(lazyLoading, {
 });
 lazyImgs.forEach((img) => {
   lazyObserver.observe(img);
+});
+
+const labelMenu = document.querySelector(".label");
+const navHeader = document.getElementById("header__nav");
+
+const checkboxMenu = document.getElementById("label__checkbox");
+labelMenu.addEventListener("click", function () {
+  console.log(checkboxMenu.checked);
+  if (checkboxMenu.checked) {
+    // navHeader.style.display = "none";
+    // navHeader.style.height = "0";
+    navHeader.style.height = "1px";
+    navHeader.style.opacity = 0;
+  }
+  if (!checkboxMenu.checked) {
+    navHeader.style.height = "45rem";
+    navHeader.style.opacity = 1;
+  }
+
+  console.log(navHeader);
 });

@@ -34,8 +34,14 @@
             alt="Bandai Namco Logo"
             class="header__logo"
         /></a>
-        <nav>
-          <ul class="header__nav-list">
+        <nav class="header__nav" id="header__nav">
+          <form class="header__form" action="">
+            <input class="header__input" type="text" placeholder="Search..." />
+            <button class="header__label" for="">
+              <ion-icon class="header__icon" name="search-outline"></ion-icon>
+            </button>
+          </form>
+          <ul class="header__list">
             <li><a class="header__link" href="">Games</a></li>
             <li><a class="header__link" href="">Store</a></li>
             <li><a class="header__link" href="">News</a></li>
@@ -53,6 +59,16 @@
             <button class="header__btn">
               <ion-icon class="header__icon" name="person-outline"></ion-icon>
             </button>
+          </li>
+          <li>
+            <input
+              class="label__checkbox"
+              id="label__checkbox"
+              type="checkbox"
+            />
+            <label class="label" for="label__checkbox">
+              <span class="label__icon">&nbsp;</span>
+            </label>
           </li>
         </ul>
       </header>
@@ -95,8 +111,12 @@
         </nav>
 
         <section class="video-section">
-          <div class="logo-box">
-            <img src="img/logos/eldenring_new(1).png" alt="" />
+          <div class="video-section__logo-box">
+            <img
+              class="video-section__logo"
+              src="img/logos/eldenring_new(1).png"
+              alt=""
+            />
           </div>
           <video
             loop=""
@@ -129,7 +149,7 @@
             </div>
             <a href="#" class="intro-section__link">Press kit</a>
           </div>
-          <div class="intro-section__body grid">
+          <div class="intro-section__body container grid">
             <div class="intro-section__content">
               <div class="intro-section__text-box">
                 <h2 class="heading-tertiary">
@@ -312,6 +332,7 @@
           </div>
           <div class="center-content">
             <img
+              class="game-scores"
               src="img/ER-Notes-920x160.jpg"
               class="u-vertical-bottom"
               alt="Game scores"
@@ -322,7 +343,7 @@
         <div class="thumb thumb--feature">
           <section class="feature-section section" id="feature-section">
             <h2 class="heading-secondary">Key features</h2>
-            <div class="grid grid--2-cols">
+            <div class="container grid grid--2-cols">
               <div class="feature-section__img-box">
                 <img
                   class="lazy-img"
@@ -697,7 +718,7 @@
               </button>
             </div>
             <div
-              class="cards-box grid--3-cols cards-box--XboxSeries cards-box--active"
+              class="cards-box container grid--3-cols cards-box--XboxSeries cards-box--active"
             >
               <div class="card">
                 <div class="card-image">
@@ -749,7 +770,7 @@
                 </div>
               </div>
             </div>
-            <div class="cards-box grid grid--3-cols cards-box--PS5">
+            <div class="cards-box container grid grid--3-cols cards-box--PS5">
               <div class="card">
                 <div class="card-image">
                   <img
@@ -800,7 +821,7 @@
                 </div>
               </div>
             </div>
-            <div class="cards-box grid grid--3-cols cards-box--PS4">
+            <div class="cards-box container grid grid--3-cols cards-box--PS4">
               <div class="card">
                 <div class="card-image">
                   <img
@@ -851,7 +872,7 @@
                 </div>
               </div>
             </div>
-            <div class="cards-box grid grid--3-cols cards-box--PC">
+            <div class="cards-box container grid grid--3-cols cards-box--PC">
               <div class="card">
                 <div class="card-image">
                   <img src="img/shop/shop-image-4.jpg" alt="Product for PC 1" />
@@ -893,7 +914,9 @@
                 </div>
               </div>
             </div>
-            <div class="cards-box grid grid--3-cols cards-box--XboxOne">
+            <div
+              class="cards-box container grid grid--3-cols cards-box--XboxOne"
+            >
               <div class="card">
                 <div class="card-image">
                   <img
@@ -1152,7 +1175,7 @@
         </div>
       </footer>
 
-      <div class="external-btns">
+      <div class="external-btns section--hidden">
         <button class="external-btns__btn external-btns--selectable">
           <ion-icon
             class="external-btns__icon"
